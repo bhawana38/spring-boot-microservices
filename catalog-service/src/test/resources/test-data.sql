@@ -1,0 +1,19 @@
+truncate table products;
+
+insert into products(code, name, description, image_url, price) values
+('P100','Algorithms to Live By: The Computer Science of Human Decisions','A fascinating exploration of how insights from computer algorithms can be applied to our everyday lives.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1454296875i/25666050.jpg', 42.99),
+('P101','Concrete Mathematics: A Foundation for Computer Science','Concrete Mathematics is a blending of CONtinuous and disCRETE mathematics.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348780612i/112243.jpg', 48.50),
+('P102','Computer Science With Python','An introduction to programming using a language called Python','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1502796039i/36044968.jpg', 85.00),
+('P103','Machine Learning', 'Covers the field of machine learning', 'https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387743284i/213030.jpg', 54.20),
+('P104','Software Engineering','Presents a broad perspective on software systems engineering','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1171499571i/103569.jpg', 72.00),
+('P105','Turing''s Vision: The Birth of Computer Science','Chris Bernhardt explains the theory, Turing''s most important contribution, for the general reader.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1465508813i/27310514.jpg', 68.00),
+('P106','Mathematics for Computer Science','Covers elementary discrete mathematics for computer science and engineering','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1375771781i/12836498.jpg', 35.00),
+('P107','Real-Time Systems','A text designed to introduce design and evaluation issues in real-time computer systems.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1266840159i/1586571.jpg', 29.50),
+('P108','Data Structures and Algorithms','Algorithm design techniques are also stressed and basic algorithm analysis is covered.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347287711i/112264.jpg', 44.95),
+('P109','Computer Vision: Algorithms and Applications','Explores the variety of techniques commonly used to analyze and interpret images.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1349005484i/9494221.jpg', 90.00),
+('P110','Modern Operating Systems','Gives a solid conceptual overview of operating system design, including detailed case studies of Unix/Linux and Windows 2000.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387702085i/166195.jpg', 75.00),
+('P111','Operating System Concepts','Fresh and up-to-date with contemporary examples of how operating systems function','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387667734i/83833.jpg', 38.00),
+('P112','Computer Networks','Tanenbaum explains how networks work on the inside, from underlying physical layer hardware up through today''s most popular network applications.','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347462821i/166190.jpg', 24.00),
+('P113','Computer Networking: A Top-Down Approach','An early emphasis on application-layer paradigms and application programming interfaces','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387700719i/83847.jpg', 32.50),
+('P114','Computer and Communication Networks','Explains the modern technologies of networking and communications, preparing you to analyze and simulate complex networks','https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1391271266i/193422.jpg', 65.00)
+;
