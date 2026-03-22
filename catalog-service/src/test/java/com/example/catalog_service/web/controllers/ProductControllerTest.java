@@ -1,18 +1,17 @@
 package com.example.catalog_service.web.controllers;
 
-import com.example.catalog_service.AbstractIT;
-import com.example.catalog_service.domain.Product;
-import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Test;
-import org.springframework.test.context.jdbc.Sql;
-
-import java.math.BigDecimal;
-
 import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import com.example.catalog_service.AbstractIT;
+import com.example.catalog_service.domain.Product;
+import io.restassured.http.ContentType;
+import java.math.BigDecimal;
+import org.junit.jupiter.api.Test;
+import org.springframework.test.context.jdbc.Sql;
 
 @Sql("/test-data.sql")
 class ProductControllerTest extends AbstractIT {
@@ -32,8 +31,8 @@ class ProductControllerTest extends AbstractIT {
                 .body("isLast", is(false))
                 .body("hasNext", is(true))
                 .body("hasPrevious", is(false));
-
     }
+
     @Test
     void shouldReturnNotFoundWhenProductCodeNotExists() {
         String code = "invalid_product_code";
@@ -48,11 +47,11 @@ class ProductControllerTest extends AbstractIT {
     }
 
     @Test
-    void shouldGetProductByCode(){
+    void shouldGetProductByCode() {
         String code = "P100";
         Product product = given().contentType(ContentType.JSON)
                 .when()
-                .get("/api/products/{code}",code)
+                .get("/api/products/{code}", code)
                 .then()
                 .statusCode(200)
                 .assertThat()
@@ -62,8 +61,9 @@ class ProductControllerTest extends AbstractIT {
 
         assertThat(product.code()).isEqualTo("P100");
         assertThat(product.name()).isEqualTo("Algorithms to Live By: The Computer Science of Human Decisions");
-        assertThat(product.description()).isEqualTo("A fascinating exploration of how insights from computer algorithms can be applied to our everyday lives.");
+        assertThat(product.description())
+                .isEqualTo(
+                        "A fascinating exploration of how insights from computer algorithms can be applied to our everyday lives.");
         assertThat(product.price()).isEqualTo(new BigDecimal("42.99"));
-
     }
 }
